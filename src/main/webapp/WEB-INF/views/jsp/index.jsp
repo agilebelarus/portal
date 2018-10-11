@@ -5,7 +5,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Lawfirm Template</title>
+	<title>Example</title>
 
 	<spring:url value="/resources/core/css/animate.css" var="animateCss" />
     <spring:url value="/resources/core/css/icomoon.css" var="icomoonCss" />
