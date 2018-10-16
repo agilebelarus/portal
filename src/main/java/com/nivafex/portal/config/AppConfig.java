@@ -12,7 +12,7 @@ import org.springframework.web.servlet.view.tiles3.TilesViewResolver;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = "com.nivafex.portal.web")
+@ComponentScan(basePackages = "com.nivafex.portal")
 public class AppConfig extends WebMvcConfigurerAdapter {
     /**
      * Configure TilesConfigurer.
