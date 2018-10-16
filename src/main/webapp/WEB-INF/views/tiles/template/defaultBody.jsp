@@ -1,6 +1,3 @@
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<spring:url value="/core/images" var="images" />
 <aside id="colorlib-hero" class="js-fullheight">
     <div class="flexslider js-fullheight">
         <ul class="slides">
