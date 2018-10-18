@@ -13,13 +13,33 @@ public class AppController {
         return "home";
     }
 
+    @RequestMapping(value = {"/practice"}, method = RequestMethod.GET)
+    public String practicePage(ModelMap model) {
+        return "practice";
+    }
+
     @RequestMapping(value = {"/products"}, method = RequestMethod.GET)
     public String productsPage(ModelMap model) {
         return "products";
     }
 
-    @RequestMapping(value = {"/contactus"}, method = RequestMethod.GET)
-    public String contactUsPage(ModelMap model) {
-        return "contactus";
+    @RequestMapping(value = {"/won"}, method = RequestMethod.GET)
+    public String wonPage(ModelMap model) {
+        return "won";
+    }
+
+    @RequestMapping(value = {"/blog"}, method = RequestMethod.GET)
+    public String blogPage(ModelMap model) {
+        return "blog";
+    }
+
+    @RequestMapping(value = {"/about"}, method = RequestMethod.GET)
+    public String aboutPage(ModelMap model) {
+        return "about";
+    }
+
+    @RequestMapping(value = {"/contact"}, method = RequestMethod.GET)
+    public String contactPage(ModelMap model) {
+        return "contact";
     }
 }

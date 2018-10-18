@@ -7,22 +7,14 @@
                 </div>
                 <div class="col-md-10 text-right menu-1">
                     <ul>
-                        <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="practice.html">Practice Areas</a></li>
-                        <li><a href="won.html">Won Cases</a></li>
-                        <li class="has-dropdown">
-                            <a href="blog.html">Blog</a>
-                            <ul class="dropdown">
-                                <li><a href="#">menu 1</a></li>
-                                <li><a href="#">menu 2</a></li>
-                                <li><a href="#">menu 3</a></li>
-                                <li><a href="#">menu 4</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li class="active"><a href="/work">Home</a></li>
+                        <li><a href="/work/practice">Practice Areas</a></li>
+                        <li><a href="/work/won">Won Cases</a></li>
+                        <li><a href="/work/blog">Blog</a></li>
+                        <li><a href="/work/about">About</a></li>
+                        <li><a href="/work/contact">Contact</a></li>
                         <li class="btn-cta"><a href="#"><span>Make an Appointment</span></a></li>
-                        <!-- <li class="btn-cta"><a href="#"><span>Sign Up</span></a></li> -->
+                        <li class="btn-cta"><a href="#"><span>Sign Up</span></a></li>
                     </ul>
                 </div>
             </div>

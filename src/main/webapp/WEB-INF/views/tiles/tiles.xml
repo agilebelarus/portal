@@ -19,16 +19,35 @@
         <put-attribute name="body" value="/WEB-INF/views/pages/home.jsp" />
     </definition>
 
-    <!-- Product Page -->
-    <definition name="products" extends="base-definition">
-        <put-attribute name="title" value="Products" />
-        <put-attribute name="body" value="/WEB-INF/views/pages/products.jsp" />
+    <!-- Practice Page -->
+    <definition name="practice" extends="base-definition">
+        <put-attribute name="title" value="Practice Area" />
+        <put-attribute name="body" value="/WEB-INF/views/pages/practice.jsp" />
     </definition>
 
-    <!-- Contact-us Page -->
-    <definition name="contactus" extends="base-definition">
-        <put-attribute name="title" value="Contact Us" />
-        <put-attribute name="body" value="/WEB-INF/views/pages/contactus.jsp" />
+    <!-- Won Page -->
+    <definition name="won" extends="base-definition">
+        <put-attribute name="title" value="Won Cases" />
+        <put-attribute name="body" value="/WEB-INF/views/pages/won.jsp" />
     </definition>
+
+    <!-- Blog Page -->
+    <definition name="blog" extends="base-definition">
+        <put-attribute name="title" value="Blog" />
+        <put-attribute name="body" value="/WEB-INF/views/pages/blog.jsp" />
+    </definition>
+
+    <!-- About Page -->
+    <definition name="about" extends="base-definition">
+        <put-attribute name="title" value="About Us" />
+        <put-attribute name="body" value="/WEB-INF/views/pages/about.jsp" />
+    </definition>
+
+    <!-- Contact Page -->
+    <definition name="contact" extends="base-definition">
+        <put-attribute name="title" value="Contact" />
+        <put-attribute name="body" value="/WEB-INF/views/pages/contact.jsp" />
+    </definition>
+
 
 </tiles-definitions>
