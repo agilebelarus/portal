@@ -49,5 +49,17 @@
         <put-attribute name="body" value="/WEB-INF/views/pages/contact.jsp" />
     </definition>
 
+    <!-- Welcome Page -->
+    <definition name="welcome" extends="base-definition">
+        <put-attribute name="title" value="Welcome" />
+        <put-attribute name="body" value="/WEB-INF/views/pages/welcome.jsp" />
+    </definition>
+
+    <!-- Form Page -->
+    <definition name="form" extends="base-definition">
+        <put-attribute name="title" value="Form" />
+        <put-attribute name="body" value="/WEB-INF/views/pages/form.jsp" />
+    </definition>
+
 
 </tiles-definitions>
