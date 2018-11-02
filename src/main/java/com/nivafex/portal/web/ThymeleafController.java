@@ -12,6 +12,6 @@ public class ThymeleafController {
     @RequestMapping(value = {"/", "/test"}, method = RequestMethod.GET)
     public String showSeedstarters(Model model) {
         model.addAttribute("home", "hello world");
-        return "test";
+        return "hello";
     }
 }

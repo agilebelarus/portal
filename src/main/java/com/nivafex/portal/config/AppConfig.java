@@ -1,7 +1,10 @@
 package com.nivafex.portal.config;
 
 import com.mongodb.MongoClient;
+import com.nivafex.portal.dao.TemplateDao;
+import com.nivafex.portal.logic.DBTemplateResolver;
 import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.annotation.Bean;
@@ -30,6 +33,9 @@ import org.thymeleaf.templateresolver.ServletContextTemplateResolver;
 public class AppConfig extends WebMvcConfigurerAdapter implements ApplicationContextAware {
 
     private ApplicationContext applicationContext;
+
+    @Autowired
+    TemplateDao templateDao;
 
 
     public AppConfig() {
@@ -83,11 +89,20 @@ public class AppConfig extends WebMvcConfigurerAdapter implements ApplicationCon
     }
 
     @Bean
-    public SpringTemplateEngine templateEngine(){
+    public DBTemplateResolver dbTemplateResolver() {
+        DBTemplateResolver dbTemplateResolver = new DBTemplateResolver(templateDao);
+        dbTemplateResolver.setTemplateMode(TemplateMode.HTML);
+        dbTemplateResolver.setCacheable(true);
+        return dbTemplateResolver;
+
+    }
+
+    @Bean
+    public SpringTemplateEngine templateEngine() {
         // SpringTemplateEngine automatically applies SpringStandardDialect and
         // enables Spring's own MessageSource message resolution mechanisms.
         SpringTemplateEngine templateEngine = new SpringTemplateEngine();
-        templateEngine.setTemplateResolver(templateResolver());
+        templateEngine.setTemplateResolver(dbTemplateResolver());
         // Enabling the SpringEL compiler with Spring 4.2.4 or newer can
         // speed up execution in most scenarios, but might be incompatible
         // with specific cases when expressions in one template are reused
@@ -98,7 +113,7 @@ public class AppConfig extends WebMvcConfigurerAdapter implements ApplicationCon
     }
 
     @Bean
-    public ThymeleafViewResolver viewResolver(){
+    public ThymeleafViewResolver viewResolver() {
         ThymeleafViewResolver viewResolver = new ThymeleafViewResolver();
         viewResolver.setTemplateEngine(templateEngine());
         return viewResolver;
